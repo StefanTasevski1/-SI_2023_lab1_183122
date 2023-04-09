@@ -1,1 +1,328 @@
+4. C:\Users\User\Desktop\Repo SI>git init
+Initialized empty Git repository in C:/Users/User/Desktop/Repo SI/.git/
+Ovaa komanda kreira inicijalizira repository so .git ekstenzija vo vekje postoecki directory.  
+
+5. C:\Users\User\Desktop\Repo SI>git remote add origin https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+Ovaa komanda pravi nov remote shto se vika origin i shto pokazuva kon github repozitoriumot.
+
+
+
+6. C:\Users\User\Desktop\Repo SI>git add README.md
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Initial commit"
+[master 213d7c5] Initial commit
+ 1 file changed, 1 insertion(+)
+Ovaa komanda dodava readme file i dodava komentar initial commit
+
+7.C:\Users\User\Desktop\Repo SI>echo.>SILab1.java
+OVAA KOMANDA kreira prazen file "SILab1.java"
+C:\Users\User\Desktop\Repo SI>git add SILab1.java
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Add java class"
+[master aaec221] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+C:\Users\User\Desktop\Repo SI>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 643 bytes | 643.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   213d7c5..aaec221  master -> master
+OVAA komanda dodava file .java so poraka add java class. A git push komandata za da se prikachi na repozitoriumot.
+
+
+8. //
+9. C:\Users\User\Desktop\Repo SI>git checkout -b bug1 master
+Switched to a new branch 'bug1'
+
+C:\Users\User\Desktop\Repo SI>git checkout -b bug2 master
+Switched to a new branch 'bug2'
+
+C:\Users\User\Desktop\Repo SI>git checkout -b bug3 master
+Switched to a new branch 'bug3'
+OVAA komanda e za kreiranje na granki.
+
+
+10. C:\Users\User\Desktop\Repo SI>git checkout bug1
+Switched to branch 'bug1'
+OVAA komanda e da se prefrlime na grankata bug1.
+NO MI SE POJAVI OVOJ PROBLEM.
+C:\Users\User\Desktop\Repo SI>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\User\Desktop\Repo SI>git checkout master
+Switched to branch 'master'
+M       SILab1.java
+Your branch is up to date with 'origin/master'.
+
+C:\Users\User\Desktop\Repo SI>git add SILab1.java
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Add java class"
+[master 5e3e28e] Add java class
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+C:\Users\User\Desktop\Repo SI>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   dde63b9..5e3e28e  master -> master
+
+C:\Users\User\Desktop\Repo SI>git checkout bug1
+error: Your local changes to the following files would be overwritten by checkout:
+        SILab1.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Add java class"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\User\Desktop\Repo SI>git checkout bug1
+error: Your local changes to the following files would be overwritten by checkout:
+        SILab1.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\User\Desktop\Repo SI>git stash save "Add java class"
+KADESHTO ISKORISTIV git stash save kako shto mi beshe predlozheno od cmd.
+
+
+11. C:\Users\User\Desktop\Repo SI>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\User\Desktop\Repo SI>git add SILab1.java
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Add java class"
+[bug1 d8e7539] Add java class
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+C:\Users\User\Desktop\Repo SI>git push
+fatal: The current branch bug1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug1
+
+
+C:\Users\User\Desktop\Repo SI>git push --set-upstream origin bug1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/StefanTasevski1/-SI_2023_lab1_183122/pull/new/bug1
+remote:
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+ * [new branch]      bug1 -> bug1
+Branch 'bug1' set up to track remote branch 'bug1' from 'origin'.
+
+OVAA komanda mi e da se prefrlam na bug1 i da go upload-nam noviot file, popraveniot java file 
+no zaboraviv deka porakata treba da mi bide FIX wrong loop for reading.
+
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Fix wrong loop for reading"
+On branch bug1
+Your branch is up to date with 'origin/bug1'.
+
+12. C:\Users\User\Desktop\Repo SI>git checkout bug2
+Switched to branch 'bug2'
+OVAA komanda mi e da se smeni na bug2.
+
+13.C:\Users\User\Desktop\Repo SI>git add SILab1.java
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 e88aced] Fix wrong condition in filterOddNumbers
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+C:\Users\User\Desktop\Repo SI>git push
+fatal: The current branch bug2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug2
+
+
+C:\Users\User\Desktop\Repo SI>git push --set-upstream origin bug2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/StefanTasevski1/-SI_2023_lab1_183122/pull/new/bug2
+remote:
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+ * [new branch]      bug2 -> bug2
+Branch 'bug2' set up to track remote branch 'bug2' from 'origin'.
+OVAA komanda mi e za da se dodade promenetiot file .java so porakata "Fix wrong condition in filterOddNumbers"
+
+
+14/15.
+C:\Users\User\Desktop\Repo SI>git checkout bug3
+Switched to branch 'bug3'
+
+C:\Users\User\Desktop\Repo SI>git add SILab1.java
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Fix method sumEvenNumbers"
+[bug3 dafb920] Fix method sumEvenNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\Desktop\Repo SI>git push
+fatal: The current branch bug3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug3
+
+
+C:\Users\User\Desktop\Repo SI>git push --set-upstream origin bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug3' on GitHub by visiting:
+remote:      https://github.com/StefanTasevski1/-SI_2023_lab1_183122/pull/new/bug3
+remote:
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+ * [new branch]      bug3 -> bug3
+Branch 'bug3' set up to track remote branch 'bug3' from 'origin'. 
+OVIE KOMANDI MI E DA SE SMENI NA BUG 3 I DA SE DODADE PROMENETIOT FILE .java SO PORAKATA "Fix method sumEvenNumbers"
+
+16.C:\Users\User\Desktop\Repo SI>git push origin master
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 272 bytes | 272.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   0963a12..4181fec  master -> master
+OVAA KOMANDA pravi push na lokalnite promeni vo master vo oddalecheniot repozitorium.
+
+17. C:\Users\User\Desktop\Repo SI>git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+OVAA KOMANDA MI E DA SE SMENAM NA MASTER. 
+
+
+18/22.C:\Users\User\Desktop\Repo SI>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\User\Desktop\Repo SI>git merge bug1
+Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+
+C:\Users\User\Desktop\Repo SI>git push origin master
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 242 bytes | 242.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   5e3e28e..0963a12  master -> master
+
+C:\Users\User\Desktop\Repo SI>git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\User\Desktop\Repo SI>git pull bug1
+fatal: 'bug1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\User\Desktop\Repo SI>git pull origin bug1
+From https://github.com/StefanTasevski1/-SI_2023_lab1_183122
+ * branch            bug1       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\User\Desktop\Repo SI>git push
+Everything up-to-date
+
+C:\Users\User\Desktop\Repo SI>git push origin master
+Everything up-to-date
+
+C:\Users\User\Desktop\Repo SI>git pull origin bug2
+From https://github.com/StefanTasevski1/-SI_2023_lab1_183122
+ * branch            bug2       -> FETCH_HEAD
+Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+
+C:\Users\User\Desktop\Repo SI>git push origin master
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 272 bytes | 272.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   0963a12..4181fec  master -> master
+OVIE KOMANDI SE ZA SINHRONIZACIJA kon master.
+
+
+
+
+
+
+23. C:\Users\User\Desktop\Repo SI>git rebase master
+Current branch master is up to date.
+OVAA KOMANDA gi zema promenite na drugite granki i gi dodava na promenetiot master drvoto.
+
+24. git checkout master
+
+25/26.C:\Users\User\Desktop\Repo SI>git pull origin bug3
+From https://github.com/StefanTasevski1/-SI_2023_lab1_183122
+ * branch            bug3       -> FETCH_HEAD
+Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+
+C:\Users\User\Desktop\Repo SI>git push origin master
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 272 bytes | 272.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   4181fec..42ed4b5  master -> master
+SINHRONIZACIJA NA BUG3 SO MASTER.
+
+27.
+C:\Users\User\Desktop\Repo SI>echo.> logs.txt
+
+C:\Users\User\Desktop\Repo SI>git add logs.txt
+
+C:\Users\User\Desktop\Repo SI>git commit -m "Add logs.txt file"
+[master ebdfb32] Add logs.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 logs.txt
+
+C:\Users\User\Desktop\Repo SI>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   42ed4b5..ebdfb32  master -> master
+JA DODAVAM .txt DATOTEKATA vo github repozitoriumot so poraka "Add logs.txt file".
 
