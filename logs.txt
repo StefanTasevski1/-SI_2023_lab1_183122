@@ -33,6 +33,66 @@ To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
    213d7c5..aaec221  master -> master
 OVAA komanda dodava file .java so poraka add java class. A git push komandata za da se prikachi na repozitoriumot.
 
+28. 
+C:\Users\User\Desktop\Repo SI>git checkout bug1
+Switched to branch 'bug1'
+Your branch is up to date with 'origin/bug1'.
+
+C:\Users\User\Desktop\Repo SI>git merge origin/master
+Updating d8e7539..b59b3aa
+Fast-forward
+ 183122.txt  |   1 +
+ SILab1.java |   2 +-
+ logs.txt    | 328 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 330 insertions(+), 1 deletion(-)
+ create mode 100644 183122.txt
+ create mode 100644 logs.txt
+
+C:\Users\User\Desktop\Repo SI>git push origin bug1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   d8e7539..b59b3aa  bug1 -> bug1
+
+C:\Users\User\Desktop\Repo SI>git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+C:\Users\User\Desktop\Repo SI>git merge origin/master
+Updating e88aced..b59b3aa
+Fast-forward
+ 183122.txt  |   1 +
+ SILab1.java |   4 +-
+ logs.txt    | 328 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 331 insertions(+), 2 deletions(-)
+ create mode 100644 183122.txt
+ create mode 100644 logs.txt
+
+C:\Users\User\Desktop\Repo SI>git push origin bug2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   e88aced..b59b3aa  bug2 -> bug2
+
+C:\Users\User\Desktop\Repo SI>git checkout bug3
+Switched to branch 'bug3'
+Your branch is up to date with 'origin/bug3'.
+
+C:\Users\User\Desktop\Repo SI>git merge origin/master
+Updating dafb920..b59b3aa
+Fast-forward
+ 183122.txt  |   1 +
+ SILab1.java |   8 +-
+ logs.txt    | 328 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 333 insertions(+), 4 deletions(-)
+ create mode 100644 183122.txt
+ create mode 100644 logs.txt
+
+C:\Users\User\Desktop\Repo SI>git push origin bug3
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/StefanTasevski1/-SI_2023_lab1_183122.git
+   dafb920..b59b3aa  bug3 -> bug3
+
+SO KOMANDATA GIT MERGE se sinhroniziraat grankite so remote repository
+
 
 8. //
 9. C:\Users\User\Desktop\Repo SI>git checkout -b bug1 master
